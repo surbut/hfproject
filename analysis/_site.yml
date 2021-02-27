@@ -1,7 +1,7 @@
-name: "hfproject"
+name: hfproject
 output_dir: ../docs
 navbar:
-  title: "hfproject"
+  title: hfproject
   left:
   - text: Home
     href: index.html
@@ -9,6 +9,10 @@ navbar:
     href: about.html
   - text: License
     href: license.html
+  right:
+  - icon: fa-github
+    text: Source code
+    href: https://github.com/surbut/hfproject
 output:
   workflowr::wflow_html:
     toc: yes
