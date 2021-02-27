@@ -1,0 +1,46 @@
+---
+title: "hf"
+author: "Your Name"
+date: "2021-02-19"
+output: workflowr::wflow_html
+editor_options:
+  chunk_output_type: console
+---
+
+## Introduction
+
+Here we organize the data frame for preliminary analysis.
+
+
+```{r}
+setwd("~/hfproject/analysis/")
+library("workflowr")
+df=read.csv("../data/ms_hf.csv")
+good_df=df[,c("X","Age.of.Death","Gender","Initial.BP..SYSTOLIC","Earliest..Creatinine1")]
+
+#names(df)
+ef_min=df[,grep(names(df),pattern = "EF_Min")]
+
+##looks like 
+df_min=df[,c("EF_Min..LVEFMvodSim4C2D","EF_Min..LVEFModSimp2C2D","EF_Min..EF")]
+          
+mean_ef_min=apply(df_min,1,function(x){
+  x=as.numeric(x)
+  mean(na.omit(x))})
+
+
+ef_max=df[,grep(names(df),pattern = "EF_Max")]
+names(ef_max)
+
+ef_max=df[,c("EF_Max..EF","EF_Max..LVEjectionFraction2D","EF_Max..LVEFModSim4C","EF_Max..LVEFModSim4C","EF_Max..EF","EF_Max..LVEjectionFraction2D","EF_Max..LVEFModSim4C","EF_Max..LVEFModSimp2C","EF_Max..LVEFModSim4C2D","EF_Max..LVEFModSimp2C2D","EF_Max..LVEFModSimpBiPlane","EF_Max..EstimatedEF")]      
+
+mean_ef_max=apply(ef_max,1,function(x)
+  {x=as.numeric(x)
+  mean(na.omit(x))
+  })
+               
+
+full_ef=data.frame(good_df,mean_ef_max,mean_ef_min)
+head(full_ef)
+#write.table(full_ef,"../data/full_ef.txt")
+```
