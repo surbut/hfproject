@@ -13,9 +13,9 @@ Here we organize the data frame for preliminary analysis.
 
 
 ```{r}
-setwd("~/hfproject/analysis/")
+
 library("workflowr")
-df=read.csv("../data/ms_hf.csv")
+df=read.csv("data/ms_hf.csv")
 good_df=df[,c("X","Age.of.Death","Gender","Initial.BP..SYSTOLIC","Earliest..Creatinine1")]
 
 #names(df)
