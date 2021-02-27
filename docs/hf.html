@@ -27,6 +27,8 @@
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-5.1.0/css/all.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-5.1.0/css/v4-shims.css" rel="stylesheet" />
 
 <link rel="icon" href="https://github.com/workflowr/workflowr-assets/raw/master/img/reproducible.png">
 <!-- Add a small amount of space between sections. -->
@@ -377,7 +379,13 @@ div.tocify {
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
-        
+        <li>
+  <a href="https://github.com/surbut/hfproject">
+    <span class="fa fa-github"></span>
+     
+    Source code
+  </a>
+</li>
       </ul>
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
@@ -529,16 +537,16 @@ analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongd15907e"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> d15907e </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree08405af39645056ad1b91bfc8150d4c6baba9487targetblank08405afa"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/hfproject/tree/08405af39645056ad1b91bfc8150d4c6baba9487" target="_blank">08405af</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongd15907e" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree08405af39645056ad1b91bfc8150d4c6baba9487targetblank08405afa" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version d15907e. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/surbut/hfproject/tree/08405af39645056ad1b91bfc8150d4c6baba9487" target="_blank">08405af</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -591,10 +599,27 @@ Message
 <tbody>
 <tr>
 <td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/surbut/hfproject/47f3a6997cd0fee5df177a0961230ac63b383714/docs/hf.html" target="_blank">47f3a69</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-02-27
+</td>
+<td>
+Build site.
+</td>
+</tr>
+<tr>
+<td>
 Rmd
 </td>
 <td>
-d15907e
+<a href="https://github.com/surbut/hfproject/blob/d15907e6f7b3d64cde6465e2f28a71b52284e99b/analysis/hf.Rmd" target="_blank">d15907e</a>
 </td>
 <td>
 Your Name
@@ -617,10 +642,8 @@ wflow_publish(“~/hfproject/analysis/hf.Rmd”)
 <h2>Introduction</h2>
 <p>Here we organize the data frame for preliminary analysis.</p>
 <pre class="r"><code>setwd(&quot;~/hfproject/analysis/&quot;)
-library(&quot;workflowr&quot;)</code></pre>
-<pre><code>This is workflowr version 1.6.2
-Run ?workflowr for help getting started</code></pre>
-<pre class="r"><code>df=read.csv(&quot;../data/ms_hf.csv&quot;)
+library(&quot;workflowr&quot;)
+df=read.csv(&quot;../data/ms_hf.csv&quot;)
 good_df=df[,c(&quot;X&quot;,&quot;Age.of.Death&quot;,&quot;Gender&quot;,&quot;Initial.BP..SYSTOLIC&quot;,&quot;Earliest..Creatinine1&quot;)]
 
 #names(df)
@@ -744,9 +767,9 @@ loaded via a namespace (and not attached):
  [1] Rcpp_1.0.5      rstudioapi_0.13 whisker_0.4     knitr_1.30     
  [5] magrittr_2.0.1  R6_2.5.0        rlang_0.4.9     highr_0.8      
  [9] stringr_1.4.0   tools_4.0.2     xfun_0.18       git2r_0.27.1   
-[13] htmltools_0.5.0 ellipsis_0.3.1  yaml_2.2.1      digest_0.6.27  
-[17] rprojroot_2.0.2 tibble_3.0.4    lifecycle_0.2.0 crayon_1.3.4   
-[21] later_1.1.0.1   vctrs_0.3.5     fs_1.5.0        promises_1.1.1 
+[13] htmltools_0.5.0 ellipsis_0.3.1  rprojroot_2.0.2 yaml_2.2.1     
+[17] digest_0.6.27   tibble_3.0.4    lifecycle_0.2.0 crayon_1.3.4   
+[21] later_1.1.0.1   vctrs_0.3.5     promises_1.1.1  fs_1.5.0       
 [25] glue_1.4.2      evaluate_0.14   rmarkdown_2.4   stringi_1.5.3  
 [29] compiler_4.0.2  pillar_1.4.7    httpuv_1.5.4    pkgconfig_2.0.3</code></pre>
 </div>
