@@ -1,7 +1,7 @@
 ---
 title: "hf"
-author: "Your Name"
-date: "2021-02-19"
+author: "Sarah Urbut"
+date: "3/14/2021"
 output: workflowr::wflow_html
 editor_options:
   chunk_output_type: console
@@ -63,12 +63,4 @@ summary(no_improve)
 
 
 As we can see, no huge apparent differences in initital creatining and BP or gender composition.
-
-Now we can more closely individuals the best and worst improved individuals. Let's look at the top 25%.
-
-```{r}
-df2=cbind(df,delta)
-d2=df2[-which(is.na(delta)),]
-summary(d2)
-```
 
