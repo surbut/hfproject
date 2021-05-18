@@ -40,27 +40,51 @@ mean_ef_max=apply(ef_max,1,function(x)
   })
                
 
+
 full_ef=data.frame(good_df,mean_ef_max,mean_ef_min)
 head(full_ef)
 write.table(full_ef,"data/full_ef.txt")
 ```
 
+Here I extract and convert dates:
+```{r}
+library("lubridate")
+ef_max_date=dmy(df[,"EF_Max.EchoDate"])
+ef_min_date=dmy(df[,"EF_Min..EchoDate"])
+d=ef_max_date-ef_min_date
+date.positive=d>0
 
+```
 Here we divide the table into those with improved EF and no change in EF
 
 ```{r}
 delta=mean_ef_max-mean_ef_min
 summary(na.omit(delta))##we can see that 25% of individuals had an improvement greater than or equal to 25%
 hist(delta)
-full_ef=cbind(full_ef,delta)
+full_ef=cbind(full_ef,delta,date.positive)
 full_ef$Gender=as.factor(full_ef$Gender)
-improve=full_ef[full_ef$delta>10,]
-no_improve=full_ef[full_ef$delta<10,]
-summary(improve)
-summary(no_improve)
+
+## indicate positive and negative date
+complete_ef_data=full_ef[!is.na(full_ef$date.positive),]##only pull out the ones with two dates
+complete_ef_data$date.positive[complete_ef_data$date.positive=="FALSE"]=-1
+complete_ef_data$date.positive[complete_ef_data$date.positive=="TRUE"]=1
+
+###now plot real delta
+
+hist(complete_ef_data$delta*complete_ef_data$date.positive,main="Delta")
+##This many are improving
+sum(complete_ef_data$date.positive==1)
+##this many are getting worse
+sum(complete_ef_data$date.positive==-1)
+
+
+
+
+
 ```
 
 
 
 As we can see, no huge apparent differences in initital creatining and BP or gender composition.
+
 
