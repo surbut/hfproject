@@ -1,7 +1,6 @@
 ---
 title: "hf"
 author: "Sarah Urbut"
-date: "3/14/2021"
 output: workflowr::wflow_html
 editor_options:
   chunk_output_type: console
@@ -59,8 +58,7 @@ Here we divide the table into those with improved EF and no change in EF
 
 ```{r}
 delta=mean_ef_max-mean_ef_min
-summary(na.omit(delta))##we can see that 25% of individuals had an improvement greater than or equal to 25%
-hist(delta)
+
 full_ef=cbind(full_ef,delta,date.positive)
 full_ef$Gender=as.factor(full_ef$Gender)
 
