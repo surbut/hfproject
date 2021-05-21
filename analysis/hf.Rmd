@@ -72,7 +72,7 @@ full_ef$Gender=as.factor(full_ef$Gender)
 complete_ef_data=full_ef[!is.na(full_ef$change2),]##only pull out the ones with two dates
 ###now plot real delta
 
-hist(complete_ef_data$delta*complete_ef_data$change2,main="Delta")
+hist(complete_ef_data$delta*complete_ef_data$change2,main="Delta time Change2")
 ##This many are improving
 sum(complete_ef_data$change2==1)
 ##this many are getting worse
