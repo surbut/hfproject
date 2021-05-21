@@ -29,7 +29,7 @@ mean_ef_min=apply(df_min,1,function(x){
 
 
 ef_max=df[,grep(names(df),pattern = "EF_Max")]
-names(ef_max)
+#names(ef_max)
 
 ef_max=df[,c("EF_Max..EF","EF_Max..LVEjectionFraction2D","EF_Max..EF","EF_Max..LVEjectionFraction2D","EF_Max..LVEFModSimpBiPlane","EF_Max..EstimatedEF")]      
 
@@ -41,43 +41,43 @@ mean_ef_max=apply(ef_max,1,function(x)
 
 
 full_ef=data.frame(good_df,mean_ef_max,mean_ef_min)
-head(full_ef)
+
 write.table(full_ef,"data/full_ef.txt")
 ```
 
 Here I extract and convert dates:
 ```{r}
 library("lubridate")
-ef_max_date=dmy(df[,"EF_Max.EchoDate"])
-ef_min_date=dmy(df[,"EF_Min..EchoDate"])
-d=ef_max_date-ef_min_date
-date.positive=d>0
+ef_max_date=mdy(df[,"EF_Max.EchoDate"])
+ef_min_date=mdy(df[,"EF_Min..EchoDate"])
 
+###check to see that they overlap
+which(is.na(ef_max_date))
+which(is.na(df$EF_Max.EchoDate))
+
+d=ef_max_date-ef_min_date
+
+change=ifelse(d<0,-1,d)###return negative 1 if change in EF is negative
+change2=ifelse(change>0,1,change)###return positive if change in EF is positive
+cbind(d,change2)[1:100,]## check to make sure encoded properly
 ```
 Here we divide the table into those with improved EF and no change in EF
 
 ```{r}
 delta=mean_ef_max-mean_ef_min
-
-full_ef=cbind(full_ef,delta,date.positive)
+full_ef=cbind(full_ef,delta,change2)
 full_ef$Gender=as.factor(full_ef$Gender)
 
 ## indicate positive and negative date
-complete_ef_data=full_ef[!is.na(full_ef$date.positive),]##only pull out the ones with two dates
-complete_ef_data$date.positive[complete_ef_data$date.positive=="FALSE"]=-1
-complete_ef_data$date.positive[complete_ef_data$date.positive=="TRUE"]=1
-
+complete_ef_data=full_ef[!is.na(full_ef$change2),]##only pull out the ones with two dates
 ###now plot real delta
 
-hist(complete_ef_data$delta*complete_ef_data$date.positive,main="Delta")
+hist(complete_ef_data$delta*complete_ef_data$change2,main="Delta")
 ##This many are improving
-sum(complete_ef_data$date.positive==1)
+sum(complete_ef_data$change2==1)
 ##this many are getting worse
-sum(complete_ef_data$date.positive==-1)
-
-
-
-
+sum(complete_ef_data$change2==-1)
+summary(change2)
 
 ```
 
