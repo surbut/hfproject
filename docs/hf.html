@@ -511,16 +511,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree6e7642bc229b6bc0d9f68f6370274d91f73427f6targetblank6e7642ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/hfproject/tree/6e7642bc229b6bc0d9f68f6370274d91f73427f6" target="_blank">6e7642b</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree62cd2c6a4fe2f0894df7f12d183680dc1e11884btargetblank62cd2c6a"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/hfproject/tree/62cd2c6a4fe2f0894df7f12d183680dc1e11884b" target="_blank">62cd2c6</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree6e7642bc229b6bc0d9f68f6370274d91f73427f6targetblank6e7642ba" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree62cd2c6a4fe2f0894df7f12d183680dc1e11884btargetblank62cd2c6a" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/surbut/hfproject/tree/6e7642bc229b6bc0d9f68f6370274d91f73427f6" target="_blank">6e7642b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/surbut/hfproject/tree/62cd2c6a4fe2f0894df7f12d183680dc1e11884b" target="_blank">62cd2c6</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -572,6 +572,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/surbut/hfproject/blob/62cd2c6a4fe2f0894df7f12d183680dc1e11884b/analysis/hf.Rmd" target="_blank">62cd2c6</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-21
+</td>
+<td>
+wflow_publish(“analysis/hf.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/surbut/hfproject/d74f87aa126d82391f931fe04b05fd185c2db178/docs/hf.html" target="_blank">d74f87a</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-21
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -1010,6 +1044,17 @@ Date
 <tbody>
 <tr>
 <td>
+<a href="https://github.com/surbut/hfproject/blob/d74f87aa126d82391f931fe04b05fd185c2db178/docs/figure/hf.Rmd/unnamed-chunk-3-1.png" target="_blank">d74f87a</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-21
+</td>
+</tr>
+<tr>
+<td>
 <a href="https://github.com/surbut/hfproject/blob/0e70d779c966b4a42d4515d0fe9ef13247e5869f/docs/figure/hf.Rmd/unnamed-chunk-3-1.png" target="_blank">0e70d77</a>
 </td>
 <td>
@@ -1029,9 +1074,10 @@ sum(complete_ef_data$change2==1)</code></pre>
 <pre class="r"><code>##this many are getting worse
 sum(complete_ef_data$change2==-1)</code></pre>
 <pre><code>[1] 3339</code></pre>
-<pre class="r"><code>summary(change2)</code></pre>
-<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA&#39;s 
--1.00000 -1.00000  0.00000 -0.02721  1.00000  1.00000       36 </code></pre>
+<pre class="r"><code>table(change2)</code></pre>
+<pre><code>change2
+  -1    0    1 
+3339 2533 3095 </code></pre>
 <p>As we can see, no huge apparent differences in initital creatining and BP or gender composition.</p>
 <br>
 <p>
