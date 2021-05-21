@@ -77,7 +77,7 @@ hist(complete_ef_data$delta*complete_ef_data$change2,main="Delta")
 sum(complete_ef_data$change2==1)
 ##this many are getting worse
 sum(complete_ef_data$change2==-1)
-summary(change2)
+table(change2)
 
 ```
 
