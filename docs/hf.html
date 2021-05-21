@@ -420,7 +420,7 @@ div.tocify {
 <div class="tab-content">
 <div id="summary" class="tab-pane fade in active">
 <p>
-<strong>Last updated:</strong> 2021-05-18
+<strong>Last updated:</strong> 2021-05-21
 </p>
 <p>
 <strong>Checks:</strong> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> 7 <span class="glyphicon glyphicon-exclamation-sign text-danger" aria-hidden="true"></span> 0
@@ -511,16 +511,16 @@ This reproducible <a href="http://rmarkdown.rstudio.com">R Markdown</a> analysis
 <div class="panel panel-default">
 <div class="panel-heading">
 <p class="panel-title">
-<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttreec9ac48c69f7a98acf255bbef76fca776a82c7d8atargetblankc9ac48ca"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/hfproject/tree/c9ac48c69f7a98acf255bbef76fca776a82c7d8a" target="_blank">c9ac48c</a> </a>
+<a data-toggle="collapse" data-parent="#workflowr-checks" href="#strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree6e7642bc229b6bc0d9f68f6370274d91f73427f6targetblank6e7642ba"> <span class="glyphicon glyphicon-ok text-success" aria-hidden="true"></span> <strong>Repository version:</strong> <a href="https://github.com/surbut/hfproject/tree/6e7642bc229b6bc0d9f68f6370274d91f73427f6" target="_blank">6e7642b</a> </a>
 </p>
 </div>
-<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttreec9ac48c69f7a98acf255bbef76fca776a82c7d8atargetblankc9ac48ca" class="panel-collapse collapse">
+<div id="strongRepositoryversionstrongahrefhttpsgithubcomsurbuthfprojecttree6e7642bc229b6bc0d9f68f6370274d91f73427f6targetblank6e7642ba" class="panel-collapse collapse">
 <div class="panel-body">
 <p>
 Great! You are using Git for version control. Tracking code development and connecting the code version to the results is critical for reproducibility.
 </p>
 <p>
-The results in this page were generated with repository version <a href="https://github.com/surbut/hfproject/tree/c9ac48c69f7a98acf255bbef76fca776a82c7d8a" target="_blank">c9ac48c</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
+The results in this page were generated with repository version <a href="https://github.com/surbut/hfproject/tree/6e7642bc229b6bc0d9f68f6370274d91f73427f6" target="_blank">6e7642b</a>. See the <em>Past versions</em> tab to see a history of the changes made to the R Markdown and HTML files.
 </p>
 <p>
 Note that you need to be careful to ensure that all relevant files for the analysis have been committed to Git prior to generating the results (you can use <code>wflow_publish</code> or <code>wflow_git_commit</code>). workflowr only checks the R Markdown file, but you know if there are other scripts or data files that it depends on. Below is the status of the Git repository when the results were generated:
@@ -528,6 +528,7 @@ Note that you need to be careful to ensure that all relevant files for the analy
 <pre><code>
 Ignored files:
     Ignored:    .DS_Store
+    Ignored:    .Rhistory
     Ignored:    data/.DS_Store
 
 Untracked files:
@@ -571,6 +572,40 @@ Message
 </tr>
 </thead>
 <tbody>
+<tr>
+<td>
+Rmd
+</td>
+<td>
+<a href="https://github.com/surbut/hfproject/blob/6e7642bc229b6bc0d9f68f6370274d91f73427f6/analysis/hf.Rmd" target="_blank">6e7642b</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-21
+</td>
+<td>
+wflow_publish(“analysis/hf.Rmd”)
+</td>
+</tr>
+<tr>
+<td>
+html
+</td>
+<td>
+<a href="https://rawcdn.githack.com/surbut/hfproject/0e70d779c966b4a42d4515d0fe9ef13247e5869f/docs/hf.html" target="_blank">0e70d77</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-18
+</td>
+<td>
+Build site.
+</td>
+</tr>
 <tr>
 <td>
 Rmd
@@ -801,62 +836,9 @@ mean_ef_min=apply(df_min,1,function(x){
 
 
 ef_max=df[,grep(names(df),pattern = &quot;EF_Max&quot;)]
-names(ef_max)</code></pre>
-<pre><code> [1] &quot;EF_Max.EchoDate&quot;                       
- [2] &quot;EF_Max..EF&quot;                            
- [3] &quot;EF_Max..DoppTricuspidPeakVelocity&quot;     
- [4] &quot;EF_Max..DoppTricuspidPeakEstGrad&quot;      
- [5] &quot;EF_Max..OutflowInflowStrokeVolume&quot;     
- [6] &quot;EF_Max..OutflowInflowCardiacOutput&quot;    
- [7] &quot;EF_Max..LVIDd2D&quot;                       
- [8] &quot;EF_Max..LVIDs2D&quot;                       
- [9] &quot;EF_Max..FractionalShortening2D&quot;        
-[10] &quot;EF_Max..LVEjectionFraction2D&quot;          
-[11] &quot;EF_Max..LVEFModSim4C&quot;                  
-[12] &quot;EF_Max..LVEFModSimp2C&quot;                 
-[13] &quot;EF_Max..LVEFModSim4C2D&quot;                
-[14] &quot;EF_Max..LVEFModSimp2C2D&quot;               
-[15] &quot;EF_Max..LVvolumesystole&quot;               
-[16] &quot;EF_Max..LVvolumediastole&quot;              
-[17] &quot;EF_Max..LVvolumeDiastole2d&quot;            
-[18] &quot;EF_Max..LVvolumesystole2d&quot;             
-[19] &quot;EF_Max..LVIDdInd&quot;                      
-[20] &quot;EF_Max..RVIDdInd&quot;                      
-[21] &quot;EF_Max..LVEFModSimpBiPlane&quot;            
-[22] &quot;EF_Max..LAVolumeSimpBiPlane&quot;           
-[23] &quot;EF_Max..MitralEPrimeLateralVelocity&quot;   
-[24] &quot;EF_Max..MitralEPrimeMedialVelocity&quot;    
-[25] &quot;EF_Max..MitralInflowEEPrimeLatRatio&quot;   
-[26] &quot;EF_Max..MitralInflowEEPrimeMedialRatio&quot;
-[27] &quot;EF_Max..LeftVentOutflowVTI&quot;            
-[28] &quot;EF_Max..LVDAMOD4C&quot;                     
-[29] &quot;EF_Max..LVDLMOD4C&quot;                     
-[30] &quot;EF_Max..LVDVMOD4C&quot;                     
-[31] &quot;EF_Max..LVSVMOD4C&quot;                     
-[32] &quot;EF_Max..CavitySize&quot;                    
-[33] &quot;EF_Max..GlobalFX&quot;                      
-[34] &quot;EF_Max..EFRange&quot;                       
-[35] &quot;EF_Max..EstimatedEF&quot;                   
-[36] &quot;EF_Max..EFMethod&quot;                      
-[37] &quot;EF_Max..NoLVH&quot;                         
-[38] &quot;EF_Max..ConcentricLVH&quot;                 
-[39] &quot;EF_Max..EccentricLVH&quot;                  
-[40] &quot;EF_Max..DiastolicFillingPattern&quot;       
-[41] &quot;EF_Max..DiastolicFillingPressure&quot;      
-[42] &quot;EF_Max..GradeofDysfunction&quot;            
-[43] &quot;EF_Max..YH_EF3DE&quot;                      
-[44] &quot;EF_Max..YH_GLSHide&quot;                    
-[45] &quot;EF_Max..YH_EFRangeHide&quot;                
-[46] &quot;EF_Max..YH_EFToReport&quot;                 
-[47] &quot;EF_Max..YH_GLSPercentDouble&quot;           
-[48] &quot;EF_Max..CavitySize1&quot;                   
-[49] &quot;EF_Max..GlobalFX1&quot;                     
-[50] &quot;EF_Max..Regurgitation&quot;                 
-[51] &quot;EF_Max..AnnularDilatation&quot;             
-[52] &quot;EF_Max..RVSP&quot;                          
-[53] &quot;EF_Max..PulmHtn&quot;                       
-[54] &quot;EF_Max..Echo_Indications&quot;              </code></pre>
-<pre class="r"><code>ef_max=df[,c(&quot;EF_Max..EF&quot;,&quot;EF_Max..LVEjectionFraction2D&quot;,&quot;EF_Max..EF&quot;,&quot;EF_Max..LVEjectionFraction2D&quot;,&quot;EF_Max..LVEFModSimpBiPlane&quot;,&quot;EF_Max..EstimatedEF&quot;)]      
+#names(ef_max)
+
+ef_max=df[,c(&quot;EF_Max..EF&quot;,&quot;EF_Max..LVEjectionFraction2D&quot;,&quot;EF_Max..EF&quot;,&quot;EF_Max..LVEjectionFraction2D&quot;,&quot;EF_Max..LVEFModSimpBiPlane&quot;,&quot;EF_Max..EstimatedEF&quot;)]      
 
 mean_ef_max=apply(ef_max,1,function(x)
   {x=as.numeric(x)
@@ -866,22 +848,8 @@ mean_ef_max=apply(ef_max,1,function(x)
 
 
 full_ef=data.frame(good_df,mean_ef_max,mean_ef_min)
-head(full_ef)</code></pre>
-<pre><code>          X Age.of.Death Gender Initial.BP..SYSTOLIC Earliest..Creatinine1
-1 MR1000313       3/4/19 Female                  132                  1.00
-2 MR1000917         &lt;NA&gt; Female                   82                  6.00
-3 MR1001042         &lt;NA&gt;   Male                  124                  0.97
-4 MR1001314      1/14/19 Female                  120                  0.79
-5 MR1001529       7/1/17   Male                  140                  0.70
-6 MR1002942         &lt;NA&gt;   Male                  134                  0.60
-  mean_ef_max mean_ef_min
-1    35.30000    35.30000
-2    27.00000    27.00000
-3    46.00000    37.00000
-4    18.60000    18.60000
-5    32.50000    32.50000
-6    31.38896    31.38896</code></pre>
-<pre class="r"><code>write.table(full_ef,&quot;data/full_ef.txt&quot;)</code></pre>
+
+write.table(full_ef,&quot;data/full_ef.txt&quot;)</code></pre>
 <p>Here I extract and convert dates:</p>
 <pre class="r"><code>library(&quot;lubridate&quot;)</code></pre>
 <pre><code>
@@ -889,33 +857,181 @@ Attaching package: &#39;lubridate&#39;</code></pre>
 <pre><code>The following objects are masked from &#39;package:base&#39;:
 
     date, intersect, setdiff, union</code></pre>
-<pre class="r"><code>ef_max_date=dmy(df[,&quot;EF_Max.EchoDate&quot;])</code></pre>
-<pre><code>Warning: 5385 failed to parse.</code></pre>
-<pre class="r"><code>ef_min_date=dmy(df[,&quot;EF_Min..EchoDate&quot;])</code></pre>
-<pre><code>Warning: 5418 failed to parse.</code></pre>
+<pre class="r"><code>ef_max_date=mdy(df[,&quot;EF_Max.EchoDate&quot;])
+ef_min_date=mdy(df[,&quot;EF_Min..EchoDate&quot;])
+
+###check to see that they overlap
+which(is.na(ef_max_date))</code></pre>
+<pre><code> [1]  309  839 2993 3871 4030 4117 4179 4230 4300 4346 4367 4841 4889 4993 5306
+[16] 5610 5626 5874 5950 6199 6206 6440 6707 7058 7174 7250 7260 7310 7350 7368
+[31] 7651 8936 8989 9001 9002 9003</code></pre>
+<pre class="r"><code>which(is.na(df$EF_Max.EchoDate))</code></pre>
+<pre><code> [1]  309  839 2993 3871 4030 4117 4179 4230 4300 4346 4367 4841 4889 4993 5306
+[16] 5610 5626 5874 5950 6199 6440 6707 7058 7174 7250 7260 7310 7350 7368 7651
+[31] 8936 8989</code></pre>
 <pre class="r"><code>d=ef_max_date-ef_min_date
-date.positive=d&gt;0</code></pre>
+
+change=ifelse(d&lt;0,-1,d)###return negative 1 if change in EF is negative
+change2=ifelse(change&gt;0,1,change)###return positive if change in EF is positive
+cbind(d,change2)[1:100,]## check to make sure encoded properly</code></pre>
+<pre><code>           d change2
+  [1,]     0       0
+  [2,]     0       0
+  [3,] -1046      -1
+  [4,]     0       0
+  [5,]     0       0
+  [6,]     0       0
+  [7,]  -617      -1
+  [8,]  -645      -1
+  [9,]     0       0
+ [10,]  -723      -1
+ [11,]     0       0
+ [12,]     0       0
+ [13,]  -181      -1
+ [14,]  -328      -1
+ [15,]   265       1
+ [16,]     0       0
+ [17,]  -935      -1
+ [18,]    -7      -1
+ [19,]  -503      -1
+ [20,]   140       1
+ [21,]  2031       1
+ [22,]  -162      -1
+ [23,]  -198      -1
+ [24,] -1026      -1
+ [25,]     0       0
+ [26,]   -51      -1
+ [27,]  -125      -1
+ [28,]     0       0
+ [29,]   565       1
+ [30,]     0       0
+ [31,] -1169      -1
+ [32,]   723       1
+ [33,]  -226      -1
+ [34,]     0       0
+ [35,]   279       1
+ [36,] -1438      -1
+ [37,]     0       0
+ [38,]   129       1
+ [39,]  -342      -1
+ [40,]  -257      -1
+ [41,]   406       1
+ [42,]  -490      -1
+ [43,]     0       0
+ [44,]   454       1
+ [45,]     0       0
+ [46,]  -948      -1
+ [47,]    28       1
+ [48,]   479       1
+ [49,]  -776      -1
+ [50,]   139       1
+ [51,]   503       1
+ [52,]     0       0
+ [53,]  -805      -1
+ [54,]     0       0
+ [55,]     0       0
+ [56,]  -146      -1
+ [57,]     0       0
+ [58,]   843       1
+ [59,]  -234      -1
+ [60,]  -427      -1
+ [61,]   250       1
+ [62,]    78       1
+ [63,]     0       0
+ [64,]  -105      -1
+ [65,] -2184      -1
+ [66,]     0       0
+ [67,]     0       0
+ [68,]     0       0
+ [69,]   153       1
+ [70,]  -456      -1
+ [71,]   928       1
+ [72,]   287       1
+ [73,]   569       1
+ [74,] -1122      -1
+ [75,]  -274      -1
+ [76,]   -38      -1
+ [77,]     0       0
+ [78,]     0       0
+ [79,]     0       0
+ [80,]     0       0
+ [81,]  -564      -1
+ [82,]   -65      -1
+ [83,]   783       1
+ [84,]    10       1
+ [85,]  -727      -1
+ [86,]  1030       1
+ [87,]     0       0
+ [88,]  -436      -1
+ [89,]  -103      -1
+ [90,]     0       0
+ [91,]   281       1
+ [92,]  -207      -1
+ [93,]  -694      -1
+ [94,]  -137      -1
+ [95,]  -562      -1
+ [96,]  -116      -1
+ [97,]  -224      -1
+ [98,]     0       0
+ [99,]     0       0
+[100,]  -663      -1</code></pre>
 <p>Here we divide the table into those with improved EF and no change in EF</p>
 <pre class="r"><code>delta=mean_ef_max-mean_ef_min
-
-full_ef=cbind(full_ef,delta,date.positive)
+full_ef=cbind(full_ef,delta,change2)
 full_ef$Gender=as.factor(full_ef$Gender)
 
 ## indicate positive and negative date
-complete_ef_data=full_ef[!is.na(full_ef$date.positive),]##only pull out the ones with two dates
-complete_ef_data$date.positive[complete_ef_data$date.positive==&quot;FALSE&quot;]=-1
-complete_ef_data$date.positive[complete_ef_data$date.positive==&quot;TRUE&quot;]=1
-
+complete_ef_data=full_ef[!is.na(full_ef$change2),]##only pull out the ones with two dates
 ###now plot real delta
 
-hist(complete_ef_data$delta*complete_ef_data$date.positive,main=&quot;Delta&quot;)</code></pre>
+hist(complete_ef_data$delta*complete_ef_data$change2,main=&quot;Delta&quot;)</code></pre>
 <p><img src="figure/hf.Rmd/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>
+<button type="button" class="btn btn-default btn-xs btn-workflowr btn-workflowr-fig" data-toggle="collapse" data-target="#fig-unnamed-chunk-3-1">
+Past versions of unnamed-chunk-3-1.png
+</button>
+</p>
+<div id="fig-unnamed-chunk-3-1" class="collapse">
+<div class="table-responsive">
+<table class="table table-condensed table-hover">
+<thead>
+<tr>
+<th>
+Version
+</th>
+<th>
+Author
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<a href="https://github.com/surbut/hfproject/blob/0e70d779c966b4a42d4515d0fe9ef13247e5869f/docs/figure/hf.Rmd/unnamed-chunk-3-1.png" target="_blank">0e70d77</a>
+</td>
+<td>
+Your Name
+</td>
+<td>
+2021-05-18
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
 <pre class="r"><code>##This many are improving
-sum(complete_ef_data$date.positive==1)</code></pre>
-<pre><code>[1] 491</code></pre>
+sum(complete_ef_data$change2==1)</code></pre>
+<pre><code>[1] 3095</code></pre>
 <pre class="r"><code>##this many are getting worse
-sum(complete_ef_data$date.positive==-1)</code></pre>
-<pre><code>[1] 1550</code></pre>
+sum(complete_ef_data$change2==-1)</code></pre>
+<pre><code>[1] 3339</code></pre>
+<pre class="r"><code>summary(change2)</code></pre>
+<pre><code>    Min.  1st Qu.   Median     Mean  3rd Qu.     Max.     NA&#39;s 
+-1.00000 -1.00000  0.00000 -0.02721  1.00000  1.00000       36 </code></pre>
 <p>As we can see, no huge apparent differences in initital creatining and BP or gender composition.</p>
 <br>
 <p>
